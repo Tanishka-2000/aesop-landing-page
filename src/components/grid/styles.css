@@ -1,0 +1,98 @@
+.grid{
+    display: flex;
+    padding: 150px 0 50px;
+    gap: 50px;
+}
+
+.left{
+    padding-left: 100px;
+}
+
+.right{
+    padding-right: 100px;
+}
+
+.grid .btn-outline{
+    color: #333;
+    border-color: #33333330;
+}
+
+.grid .image{
+    flex: 1;
+}
+
+.left .image{
+    order: 2;
+}
+
+.grid img{
+    width: 100%;
+    object-fit: cover;
+    display: inline;
+}
+
+@media (width < 1024px) {
+    .grid{
+        flex-direction: column;
+        padding-top: 0;
+    }
+
+    .grid .info{
+        padding-inline: 50px;
+        max-width: 80%;
+    }
+}
+
+@media (width < 640px) {
+    .grid{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .grid .info{
+        align-self: center;
+        max-width: 100%;
+        font-size: 14px;
+        padding-inline: 0;
+    }
+
+    .left{
+        padding-left: 30px;
+    }
+
+    .left .info{
+        padding-right: 30;
+    }
+    
+    .right{
+        padding-right: 30px;
+    }
+
+    .right .info{
+        padding-left: 30px;
+    }
+
+    .grid .btn-outline{
+        width: 100%;
+    }
+}
+
+.outer-image-wrapper{
+    height: calc(100% - 89px);
+    overflow: hidden;
+}
+
+.inner-image-wrapper{
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.image-container{
+    display: flex;
+    width: 312%;
+}
+
+.image-container img{
+    width: 100%;
+    object-fit: contain;
+}
